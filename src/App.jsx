@@ -5,11 +5,16 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  const message = ">_ Hello World"
+  const name = ["Gud Moring","Gud Afternoon","Gud Evening"];
   return (
     <>
-      <h1> >_ Hello World</h1>
+      <h1> {message} </h1>
 	  <h5> React App </h5>
+    {name.map( (name, index) => (
+      
+      <li key={index}>{name}</li>
+    ) )}
     </>
   )
 }
