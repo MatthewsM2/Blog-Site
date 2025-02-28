@@ -1,5 +1,5 @@
 baseURL = "https://mynewhugosite.com"
-title = "My New Hugo Site"
+title = "Matthews"
 theme = "custom"
 
 [menu]
@@ -11,6 +11,6 @@ theme = "custom"
 
   [[menu.main]]
     identifier = "about"
-    name = "About"
+    name = "About Me"
     url = "/about"
     weight = 20
