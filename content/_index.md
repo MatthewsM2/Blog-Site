@@ -1,5 +1,0 @@
----
-title: "Home"
----
-
-# Hi there 👋
