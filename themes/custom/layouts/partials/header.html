@@ -8,7 +8,7 @@
 	<title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
 
 	{{ $styles := resources.Get "css/style.css" }}
-<link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+<link rel="stylesheet" href="{{ $styles.RelPermalink | absURL }}" media="screen">
 	<!-- <link rel="stylesheet" href="" type="text/css" media="all" /> -->
 
 	{{ with .OutputFormats.Get "rss" -}}

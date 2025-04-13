@@ -11,7 +11,8 @@
 body {
   color: whitesmoke; 
   background-color: #181818;
-  font-size: 125%;
+  font-size: 1.5vw;
+  /* font-size: 125%; */
   line-height: 1.5;
   max-width: 80vw;
   padding: 1rem;
