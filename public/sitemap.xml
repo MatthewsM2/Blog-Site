@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://matthewsm2.github.io/Blog-Site/posts/hello/</loc>
+    <loc>https://matthewsm.me/posts/hello/</loc>
   </url><url>
-    <loc>https://matthewsm2.github.io/Blog-Site/about/</loc>
+    <loc>https://matthewsm.me/about/</loc>
   </url><url>
-    <loc>https://matthewsm2.github.io/Blog-Site/categories/</loc>
+    <loc>https://matthewsm.me/categories/</loc>
   </url><url>
-    <loc>https://matthewsm2.github.io/Blog-Site/</loc>
+    <loc>https://matthewsm.me/</loc>
   </url><url>
-    <loc>https://matthewsm2.github.io/Blog-Site/posts/</loc>
+    <loc>https://matthewsm.me/posts/</loc>
   </url><url>
-    <loc>https://matthewsm2.github.io/Blog-Site/tags/</loc>
+    <loc>https://matthewsm.me/tags/</loc>
   </url>
 </urlset>
