@@ -1,6 +1,7 @@
 baseURL = "https://matthewsm.me"
 title = "Matthews"
 theme = "custom"
+googleAnalytics = "G-DX55PTPFT9"
 
 [menu]
   [[menu.main]]
