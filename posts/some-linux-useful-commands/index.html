@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Some Linux Useful Commands | Matthews</title>
+
+	
+	<link rel="stylesheet" href="/css/style.css" media="screen">
+	
+
+	
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-DX55PTPFT9"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-DX55PTPFT9');
+        }
+      </script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="site-nav">
+    <a class="logo" href="https://matthewsm.me/">
+      
+        Home
+    </a>
+    <ul class="main-menu">
+      
+      <li>
+        <a href="/posts">Posts</a>
+      </li>
+      
+      <li>
+        <a href="/projects">Projects</a>
+      </li>
+      
+      <li>
+        <a href="/about">About Me</a>
+      </li>
+      
+    </ul>
+  </nav>
+</header>
+
+
+<main class="content">
+
+
+<h1>Some Linux Useful Commands</h1>
+
+<p>Convert files using  convert</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span>$ convert image.jpeg image.pdf
+</span></span></code></pre></div><p>Open Files through terminal</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span>$ xdg-open filename.png
+</span></span></code></pre></div><p>pass yes argument without waiting response</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span>$ yes <span style="color:#f92672">|</span> <span style="color:#a6e22e">rm</span> <span style="color:#a6e22e">-r</span> foldername/ 
+</span></span></code></pre></div><p>usb&ndash;
+/media or /run/media</p>
+<p>zip folder or file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span>$ zip <span style="color:#a6e22e">-r</span> <span style="color:#f92672">&lt;</span>output<span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span>input<span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><p>Size of File</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">du</span> <span style="color:#a6e22e">-h</span> <span style="color:#f92672">&lt;</span>filename<span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><p>list disk</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># fdisk -l </span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span>$ lsusb 
+</span></span></code></pre></div><p>eject / safely remove</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span>$ eject /dev/<span style="color:#f92672">&lt;</span>name<span style="color:#f92672">&gt;</span> 
+</span></span></code></pre></div>
+
+</main>
+	
+<footer>
+	<p> Made with ♥ Matthews, CC BY-SA 4.0 2025</p>
+</footer>
+
+</body>
+</html>
+

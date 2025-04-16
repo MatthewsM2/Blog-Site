@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>LAMP Stack with Docker Compose | Matthews</title>
+
+	
+	<link rel="stylesheet" href="/css/style.css" media="screen">
+	
+
+	
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-DX55PTPFT9"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-DX55PTPFT9');
+        }
+      </script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="site-nav">
+    <a class="logo" href="https://matthewsm.me/">
+      
+        Home
+    </a>
+    <ul class="main-menu">
+      
+      <li>
+        <a href="/posts">Posts</a>
+      </li>
+      
+      <li>
+        <a href="/projects">Projects</a>
+      </li>
+      
+      <li>
+        <a href="/about">About Me</a>
+      </li>
+      
+    </ul>
+  </nav>
+</header>
+
+
+<main class="content">
+
+
+<h1>LAMP Stack with Docker Compose</h1>
+
+<p>This guide sets up a basic LAMP (Linux, Apache, MySQL, PHP) stack using Docker and Docker Compose. It includes PHP 7.4 with Apache, MySQL 5.7, and phpMyAdmin.</p>
+<hr>
+<h2 id="-prerequisites">🔧 Prerequisites</h2>
+<p>Install Docker and Docker Compose:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install docker.io            
+</span></span><span style="display:flex;"><span>sudo apt install docker-compose       
+</span></span></code></pre></div><h2 id="-project-setup">📁 Project Setup</h2>
+<p>Create the project directory and subdirectories:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir -p my-lamp-project/www          
+</span></span><span style="display:flex;"><span>cd my-lamp-project                    
+</span></span></code></pre></div><hr>
+<h2 id="-docker-composeyml-file">🐳 docker-compose.yml File</h2>
+<p>Create a docker-compose.yml file with the following content:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">version</span>: <span style="color:#e6db74">&#39;3.8&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">web</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">image</span>: php:<span style="color:#ae81ff">7</span>.<span style="color:#ae81ff">4</span>-apache
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">container_name</span>: lamp_web
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ports</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">- </span><span style="color:#e6db74">&#34;80:80&#34;</span>                             
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">volumes</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">- </span>./www:/var/www/html                
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">depends_on</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">- db</span>
+</span></span><span style="display:flex;"><span>    command: /bin/bash <span style="color:#a6e22e">-c</span> <span style="color:#e6db74">&#34;docker-php-ext-install mysqli pdo pdo_mysql &amp;&amp; apachectl -D FOREGROUND&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">db</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">image</span>: mysql:<span style="color:#ae81ff">5</span>.<span style="color:#ae81ff">7</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">container_name</span>: lamp_db
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">environment</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">MYSQL_ROOT_PASSWORD</span>: rootpassword    
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">MYSQL_DATABASE</span>: mydatabase           
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">MYSQL_USER</span>: user                     
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">MYSQL_PASSWORD</span>: password             
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">volumes</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">- db_data</span>:/var/lib/mysql             
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">phpmyadmin</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">image</span>: phpmyadmin/phpmyadmin
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">container_name</span>: lamp_phpmyadmin
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">depends_on</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">- db</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">environment</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">PMA_HOST</span>: db                         
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">MYSQL_ROOT_PASSWORD</span>: rootpassword
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">ports</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">- </span><span style="color:#e6db74">&#34;8080:80&#34;</span>                          
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">volumes</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">db_data</span>:
+</span></span></code></pre></div><hr>
+<h2 id="-starting-the-containers">🚀 Starting the Containers</h2>
+<p>Run the stack in detached mode:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose up -d
+</span></span></code></pre></div><h2 id="-useful-docker-commands">🧠 Useful Docker Commands</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker stats                             
+</span></span><span style="display:flex;"><span>docker top &lt;container_id&gt;               
+</span></span><span style="display:flex;"><span>docker inspect &lt;container_id&gt;           
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Get internal IP of the database container</span>
+</span></span><span style="display:flex;"><span>docker inspect -f <span style="color:#e6db74">&#39;{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}&#39;</span> lamp_db
+</span></span></code></pre></div><hr>
+<h2 id="-accessing-mysql">🐘 Accessing MySQL</h2>
+<p>Enter the database container and connect to MySQL:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker exec -it lamp_db mysql -u root -p
+</span></span></code></pre></div><hr>
+<h2 id="-installing-mysql-extensions-in-web-container">🛠️ Installing MySQL Extensions in Web Container</h2>
+<p>Sometimes needed manually:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker exec -it lamp_web bash
+</span></span><span style="display:flex;"><span>docker-php-ext-install mysqli pdo pdo_mysql
+</span></span><span style="display:flex;"><span>apachectl restart
+</span></span><span style="display:flex;"><span>exit
+</span></span></code></pre></div><hr>
+<h2 id="-post-install-run-docker-without-sudo">🔐 Post-Install: Run Docker Without Sudo</h2>
+<p>Add your user to the docker group:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo usermod -aG docker $USER
+</span></span><span style="display:flex;"><span>newgrp docker
+</span></span></code></pre></div><hr>
+<h2 id="-cleanup">🧹 Cleanup</h2>
+<p>Stop and remove all containers and images:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose down --rmi all
+</span></span></code></pre></div>
+
+</main>
+	
+<footer>
+	<p> Made with ♥ Matthews, CC BY-SA 4.0 2025</p>
+</footer>
+
+</body>
+</html>
+

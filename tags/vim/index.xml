@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim on Matthews</title>
+    <link>https://matthewsm.me/tags/vim/</link>
+    <description>Recent content in Vim on Matthews</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 29 Dec 2023 10:50:37 +0530</lastBuildDate>
+    <atom:link href="https://matthewsm.me/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vim/Neovim</title>
+      <link>https://matthewsm.me/posts/vim-neovim/</link>
+      <pubDate>Fri, 29 Dec 2023 10:50:37 +0530</pubDate>
+      <guid>https://matthewsm.me/posts/vim-neovim/</guid>
+      <description>&lt;p&gt;Vim commands for efficient text editing, including multiple line editing using Visual Block mode, removing search highlights, recording and applying macros, and resources for further customization, all aimed at enhancing productivity and streamlining the editing workflow.&lt;/p&gt;&#xA;&lt;h2 id=&#34;multiple-lines-edit&#34;&gt;Multiple Lines Edit&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Visual Block ( Ctrl + v )&lt;/li&gt;&#xA;&lt;li&gt;Select Char&lt;/li&gt;&#xA;&lt;li&gt;Insert Mode (Capital I)&lt;/li&gt;&#xA;&lt;li&gt;Esc&lt;/li&gt;&#xA;&lt;/ul&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;remove-search-selection&#34;&gt;Remove Search Selection&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Ctrl + l&lt;/li&gt;&#xA;&lt;li&gt;:noh&lt;/li&gt;&#xA;&lt;/ul&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;record&#34;&gt;Record&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;q - start&lt;/li&gt;&#xA;&lt;li&gt;select register&lt;/li&gt;&#xA;&lt;li&gt;q - stop&lt;/li&gt;&#xA;&lt;li&gt;@register - apply&lt;/li&gt;&#xA;&lt;li&gt;@@ - repeat last&lt;/li&gt;&#xA;&lt;/ul&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/18538164/vim-iabbrev-in-my-vimrc-does-not-work&#34;&gt;iabbrev&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -2,16 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://matthewsm2.github.io/Blog-Site/posts/hello/</loc>
+    <loc>https://matthewsm.me/projects/bus-stop-predictor/</loc>
+    <lastmod>2025-04-08T23:50:24+05:30</lastmod>
   </url><url>
-    <loc>https://matthewsm2.github.io/Blog-Site/about/</loc>
+    <loc>https://matthewsm.me/</loc>
+    <lastmod>2025-04-08T23:50:24+05:30</lastmod>
   </url><url>
-    <loc>https://matthewsm2.github.io/Blog-Site/categories/</loc>
+    <loc>https://matthewsm.me/projects/</loc>
+    <lastmod>2025-04-08T23:50:24+05:30</lastmod>
   </url><url>
-    <loc>https://matthewsm2.github.io/Blog-Site/</loc>
+    <loc>https://matthewsm.me/projects/bus-timing-system/</loc>
+    <lastmod>2025-01-15T00:59:29+05:30</lastmod>
   </url><url>
-    <loc>https://matthewsm2.github.io/Blog-Site/posts/</loc>
+    <loc>https://matthewsm.me/posts/microstack-openstack-snap-install/</loc>
+    <lastmod>2024-09-03T10:01:27+05:30</lastmod>
   </url><url>
-    <loc>https://matthewsm2.github.io/Blog-Site/tags/</loc>
+    <loc>https://matthewsm.me/posts/</loc>
+    <lastmod>2024-09-03T10:01:27+05:30</lastmod>
+  </url><url>
+    <loc>https://matthewsm.me/projects/notify-class/</loc>
+    <lastmod>2024-08-01T00:22:22+05:30</lastmod>
+  </url><url>
+    <loc>https://matthewsm.me/posts/lamp-stack-docker-setup/</loc>
+    <lastmod>2024-05-24T09:41:49+05:30</lastmod>
+  </url><url>
+    <loc>https://matthewsm.me/posts/kvm-setup/</loc>
+    <lastmod>2024-05-15T10:09:08+05:30</lastmod>
+  </url><url>
+    <loc>https://matthewsm.me/posts/some-linux-useful-commands/</loc>
+    <lastmod>2024-01-17T01:11:31+05:30</lastmod>
+  </url><url>
+    <loc>https://matthewsm.me/tags/</loc>
+    <lastmod>2023-12-29T10:50:37+05:30</lastmod>
+  </url><url>
+    <loc>https://matthewsm.me/tags/vim/</loc>
+    <lastmod>2023-12-29T10:50:37+05:30</lastmod>
+  </url><url>
+    <loc>https://matthewsm.me/posts/vim-neovim/</loc>
+    <lastmod>2023-12-29T10:50:37+05:30</lastmod>
+  </url><url>
+    <loc>https://matthewsm.me/about/</loc>
+  </url><url>
+    <loc>https://matthewsm.me/categories/</loc>
   </url>
 </urlset>

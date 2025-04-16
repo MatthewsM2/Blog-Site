@@ -1,7 +1,7 @@
 /* LAYOUT */
 
 :root{
-  --black:rgba(47, 47, 47, 1);
+  --black:rgb(24, 24, 24);
   --white:rgba(255, 255, 255, 1);
   font-family: 'Courier New', Courier, monospace;
 }
@@ -12,6 +12,7 @@ body {
   color: whitesmoke; 
   background-color: #181818;
   font-size: 1.5vw;
+  /* font-size: 125%; */
   line-height: 1.5;
   max-width: 80vw;
   padding: 1rem;
@@ -58,8 +59,13 @@ footer{
 }
 .content {
   margin-bottom: 2rem;
+  padding: 0 1vw 1vw 1vw;
+  border-radius: 0.3vw;
+  background-color: #333;
 }
-
+img{
+  width: -webkit-fill-available;
+}
 /* NAVIGATION */
 
 .site-nav {

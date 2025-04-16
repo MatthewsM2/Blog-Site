@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>🚌 Bus Stop Predictor | Matthews</title>
+
+	
+	<link rel="stylesheet" href="/css/style.css" media="screen">
+	
+
+	
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-DX55PTPFT9"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-DX55PTPFT9');
+        }
+      </script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="site-nav">
+    <a class="logo" href="https://matthewsm.me/">
+      
+        Home
+    </a>
+    <ul class="main-menu">
+      
+      <li>
+        <a href="/posts">Posts</a>
+      </li>
+      
+      <li>
+        <a href="/projects">Projects</a>
+      </li>
+      
+      <li>
+        <a href="/about">About Me</a>
+      </li>
+      
+    </ul>
+  </nav>
+</header>
+
+
+<main class="content">
+
+
+<h1>🚌 Bus Stop Predictor</h1>
+
+<p>A web application for predicting bus stops from GPX track data.</p>
+<hr>
+<h2 id="-features">🚀 Features</h2>
+<ul>
+<li>Web-based GPX file upload</li>
+<li>Automatic bus stop prediction using clustering algorithms</li>
+<li>Interactive map visualization of predicted bus stops</li>
+<li>Statistical analysis with confidence scores</li>
+<li>Links to OpenStreetMap for each predicted stop</li>
+</ul>
+<hr>
+<h2 id="-installation">🛠 Installation</h2>
+<ol>
+<li>Clone this repository</li>
+<li>Install the required dependencies:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install -r requirements.txt
+</span></span></code></pre></div></li>
+<li>Run the application:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python app.py
+</span></span></code></pre></div></li>
+<li>Open your browser and navigate to <code>http://localhost:5000</code></li>
+</ol>
+<hr>
+<h2 id="-how-it-works">⚙️ How It Works</h2>
+<ol>
+<li><strong>Data Collection</strong>: Upload GPX files containing vehicle movement data</li>
+<li><strong>Preprocessing</strong>: Extract coordinates, speed, and timestamps from GPX files</li>
+<li><strong>Stop Detection</strong>: Identify points where speed is zero (vehicle stopped)</li>
+<li><strong>Clustering</strong>: Group nearby stop points using DBSCAN algorithm</li>
+<li><strong>Analysis</strong>: Calculate confidence scores based on recurring patterns</li>
+<li><strong>Visualization</strong>: Display results on interactive maps and charts</li>
+</ol>
+<hr>
+<h2 id="-technologies-used">🧰 Technologies Used</h2>
+<ul>
+<li><strong>Backend</strong>: Python, Flask</li>
+<li><strong>Data Processing</strong>: Pandas, Scikit-learn, NumPy</li>
+<li><strong>Frontend</strong>: Leaflet.js, Chart.js, Bootstrap 5, HTML5, CSS3, JavaScript</li>
+</ul>
+<hr>
+<h2 id="-links">🔗 Links</h2>
+<ul>
+<li><strong>Source Code Website</strong>: <a href="https://github.com/MatthewsM2/Predict-Bus-Stop">https://github.com/MatthewsM2/Predict-Bus-Stop</a></li>
+<li><strong>Live</strong>:<a href="https://github.com/MatthewsM2/Predict-Bus-Stop">https://github.com/MatthewsM2/Predict-Bus-Stop</a></li>
+<li><strong>License</strong>: GPL-3.0 license – see <a href="https://github.com/MatthewsM2/Predict-Bus-Stop/blob/main/LICENSE">LICENSE</a> for details</li>
+</ul>
+<hr>
+<p><code>#VibeCoding</code></p>
+
+
+</main>
+	
+<footer>
+	<p> Made with ♥ Matthews, CC BY-SA 4.0 2025</p>
+</footer>
+
+</body>
+</html>
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>kvm Setup | Matthews</title>
+
+	
+	<link rel="stylesheet" href="/css/style.css" media="screen">
+	
+
+	
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-DX55PTPFT9"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-DX55PTPFT9');
+        }
+      </script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <nav class="site-nav">
+    <a class="logo" href="https://matthewsm.me/">
+      
+        Home
+    </a>
+    <ul class="main-menu">
+      
+      <li>
+        <a href="/posts">Posts</a>
+      </li>
+      
+      <li>
+        <a href="/projects">Projects</a>
+      </li>
+      
+      <li>
+        <a href="/about">About Me</a>
+      </li>
+      
+    </ul>
+  </nav>
+</header>
+
+
+<main class="content">
+
+
+<h1>kvm Setup</h1>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fish" data-lang="fish"><span style="display:flex;"><span><span style="color:#a6e22e">egrep</span> <span style="color:#a6e22e">-c</span> <span style="color:#e6db74">&#39;(vmx|svm)&#39;</span> /proc/cpuinfo
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">systemctl</span> enable <span style="color:#a6e22e">--now</span> libvirtd
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">apt</span> install <span style="color:#a6e22e">-y</span> qemu-kvm virt-manager libvirt-daemon-system virtinst libvirt-clients bridge-utils
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">systemctl</span> start libvirtd
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">systemctl</span> status libvirtd
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">adduser</span> <span style="color:#f92672">&lt;</span>username<span style="color:#f92672">&gt;</span> libvirt
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">adduser</span> <span style="color:#f92672">&lt;</span>username<span style="color:#f92672">&gt;</span> kvm 
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">phpenmod</span> mbstring
+</span></span></code></pre></div>
+
+</main>
+	
+<footer>
+	<p> Made with ♥ Matthews, CC BY-SA 4.0 2025</p>
+</footer>
+
+</body>
+</html>
+
